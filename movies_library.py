@@ -5,9 +5,11 @@ Entertainment Center
 import os
 import json
 
+# Import project related classes
 from media import Movie
 from generator import Generator
 
+# Get movies list from a JSON file
 path = os.getcwd()
 movies_file = open('%s/resources/movies.json' % path)
 movies_json = json.loads(movies_file.read())
