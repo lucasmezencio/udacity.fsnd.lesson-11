@@ -1,0 +1,26 @@
+[
+    {
+        "name": "The Prestige",
+        "storyline": "It's Magic!",
+        "poster_url": "https://upload.wikimedia.org/wikipedia/en/d/d2/Prestige_poster.jpg",
+        "video_url": "http://youtube.com/watch?v=o4gHCmTQDVI"
+    },
+    {
+        "name": "Arrival",
+        "storyline": "Aliens! What?",
+        "poster_url": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg",
+        "video_url": "https://www.youtube.com/watch?v=ZLO4X6UI8OY"
+    },
+    {
+        "name": "Donnie Darko",
+        "storyline": "Time travel and consequences.",
+        "poster_url": "https://upload.wikimedia.org/wikipedia/en/d/db/Donnie_Darko_poster.jpg",
+        "video_url": "https://www.youtube.com/watch?v=ZZyBaFYFySk"
+    },
+    {
+        "name": "The Imitation Game",
+        "storyline": "Programming! Alan Turing!",
+        "poster_url": "https://upload.wikimedia.org/wikipedia/en/5/5e/The_Imitation_Game_poster.jpg",
+        "video_url": "https://www.youtube.com/watch?v=S5CjKEFb-sM"
+    }
+]

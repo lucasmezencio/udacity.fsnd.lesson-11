@@ -2,34 +2,22 @@
 Entertainment Center
 """
 
+import os
+import json
+
 from media import Movie
 from generator import Generator
 
-the_prestige = Movie('The Prestige',
-                     'It\'s Magic!',
-                     'https://upload.wikimedia.org/wikipedia/en'
-                     '/d/d2/Prestige_poster.jpg',
-                     'http://youtube.com/watch?v=o4gHCmTQDVI')
+path = os.getcwd()
+movies_file = open('%s/resources/movies.json' % path)
+movies_json = json.loads(movies_file.read())
+movies_file.close()
+movies = []
 
-arrival = Movie('Arrival',
-                'Aliens! What?',
-                'https://upload.wikimedia.org/wikipedia/en/'
-                'd/df/Arrival%2C_Movie_Poster.jpg',
-                'https://www.youtube.com/watch?v=ZLO4X6UI8OY')
-
-donnie = Movie('Donnie Darko',
-               'Time travel and consequences.',
-               'https://upload.wikimedia.org/wikipedia/en/'
-               'd/db/Donnie_Darko_poster.jpg',
-               'https://www.youtube.com/watch?v=ZZyBaFYFySk')
-
-imitation_game = Movie('The Imitation Game',
-                       'Programming! Alan Turing!',
-                       'https://upload.wikimedia.org/wikipedia/en/'
-                       '5/5e/The_Imitation_Game_poster.jpg',
-                       'https://www.youtube.com/watch?v=S5CjKEFb-sM')
-
-movies = [the_prestige, arrival, donnie, imitation_game]
+for movie in movies_json:
+    movie_instance = Movie(movie['name'], movie['storyline'],
+                           movie['poster_url'], movie['video_url'])
+    movies.append(movie_instance)
 
 page_generator = Generator()
 page_generator.open_movies_page(movies)
